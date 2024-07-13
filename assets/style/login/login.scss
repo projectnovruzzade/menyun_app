@@ -1,0 +1,29 @@
+@import "../../common";
+
+@font-face {
+  font-family: regular-font;
+  src: url("../../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: medium-font;
+  src: url("../../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: semibold-font;
+  src: url("../../fonts/Poppins-SemiBold.ttf");
+}
+
+body {
+  font-family: medium-font;
+  background-color: $bg-color;
+}
+
+header {
+  background-color: white;
+}
+
+// ! HEADER 
+@import "../header";
+
+// ! Wrapper
+@import "../wrapper";

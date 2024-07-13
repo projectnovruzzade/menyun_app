@@ -1,0 +1,233 @@
+@import "../../common";
+
+@font-face {
+  font-family: regular-font;
+  src: url("../../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: medium-font;
+  src: url("../../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: semibold-font;
+  src: url("../../fonts/Poppins-SemiBold.ttf");
+}
+
+#dashboard {
+  height: auto;
+}
+@import "../header";
+
+.container {
+  width: 80%;
+  background-color: #fff;
+  border-radius: 13px;
+  margin: 56px auto 56px auto;
+  padding: 30px 50px;
+  font-family: medium-font;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .content-title {
+      margin-bottom: 56px;
+      h1 {
+        font-size: 1.6rem;
+        letter-spacing: 0.4px;
+      }
+    }
+
+    .dashboard-link {
+      margin-bottom: 35px;
+
+      .component_title {
+        @include componentTitle;
+      }
+      .progress_bar {
+        margin-bottom: 12px;
+        input {
+          @include inputStyle;
+          box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.75);
+          padding: 8px 20px;
+          width: 270px;
+        }
+      }
+      .button-groups {
+        button {
+          @include buttonStyle;
+          margin-right: 5px;
+        }
+
+        a {
+          @include buttonStyle;
+        }
+      }
+    }
+
+    .dashboard-statistics {
+      margin-bottom: 30px;
+
+      .component_title {
+        @include componentTitle;
+      }
+
+      .box-groups {
+        display: flex;
+        gap: 31px;
+
+        .box {
+          flex-grow: 3;
+          border: 3px solid $border-color;
+          border-radius: 12px;
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          padding-bottom: 10px;
+          color: $color-gray-low;
+
+          .benefit {
+            b {
+              font-size: 24px;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+
+    .dashboard-diagram {
+      padding: 25px 35px;
+      border: 3px solid $border-color;
+      border-radius: 12px;
+      margin-bottom: 45px;
+
+      .component_title {
+        @include componentTitle;
+        color: #393650;
+      }
+
+      .diagram_container {
+        text-align: center;
+        padding: 50px 0;
+      }
+    }
+
+    .dashboard-orders {
+      margin-bottom: 70px;
+
+      .component_title {
+        @include componentTitle;
+      }
+
+      .box-groups {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .box {
+          width: 25%;
+          border: 3px solid $border-color;
+          border-radius: 12px;
+          padding: 15px;
+          flex-wrap: wrap;
+          padding-bottom: 15px;
+
+          .date {
+            font-size: 14px;
+            font-family: regular-font;
+            color: #000;
+            margin-bottom: 10px;
+          }
+
+          .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .price {
+              font-weight: 400;
+              font-family: regular-font;
+
+              .edit {
+                font-size: 25px;
+                letter-spacing: 0.4px;
+              }
+            }
+
+            .btn_solid_gray {
+              padding: 12px 15px;
+              text-align: center;
+              text-decoration: none;
+              color: #151515;
+              font-family: semibold-font;
+              font-weight: bold;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              border-radius: 12px;
+              background-color: $bg-color;
+
+              svg {
+                transition: 0.4s all;
+              }
+
+              &:hover svg {
+                transform: translateX(2px);
+              }
+            }
+          }
+        }
+      }
+
+      .btn_watch_all {
+        @include buttonStyle;
+        display: inline-block;
+        margin-top: 40px;
+      }
+    }
+
+    .dashboard-feedbacks {
+
+        .component_title {
+            @include componentTitle;
+            margin-bottom: 20px;
+        }
+
+        .feedback-box-groups {
+          display: flex;
+          gap: 30px;
+          flex-wrap: wrap;
+          margin-bottom: 30px;
+
+          .feedback_box {
+            display: flex;
+            width: 30%;
+            align-items: center;
+            gap: 14px;
+            font-size: 15px;
+            color: #6E7072;
+            padding: 20px;
+            border: 3px solid $border-color;
+            border-radius: 8px;
+
+
+            .user_feedback {
+
+              .stars {
+                display: flex;
+                margin-bottom: 5px;
+                gap: 5px;
+              }
+            }
+
+          }
+        }
+
+        .btn_watch_all {
+          @include buttonStyle;
+          width: fit-content;
+        }
+    }
+  }
+}

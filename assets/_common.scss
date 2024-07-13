@@ -1,0 +1,100 @@
+$green-low: #6A983C;
+$green-high: #407500;
+$green-high-hover: #46760A;
+$bg-color: #F5F5F5;
+$input-bg-color: #D1D1D1;
+$border-color: #D8D8D8;
+$color-gray-low: #5e5e5e;
+
+// ! Breakpoints
+$sm-ext: 376px;
+$sm: 426px;
+$md-ext: 500px;
+$md: 769px;
+$lg-ext: 992px;
+$lg: 1024px;
+$desktop: 1366px;
+
+
+@mixin inputStyle {
+  padding: 10px 23px;
+  border: 2px solid #D8D8D8;
+  border-radius: 12px;
+  outline: none;
+  transition: .3s all;
+
+  &:focus {
+    border-color: #387ADF;
+  }
+}
+
+@mixin buttonStyle {
+  padding: 10px 16px;
+  background-color: $green-low;
+  border: 2px solid $green-high;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: .3s all;
+
+  &:hover {
+    background-color: $green-high-hover;
+  }
+}
+
+
+@mixin componentTitle {
+  font-size: 1.3rem; 
+  margin-bottom: 5px; 
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    background-color: $bg-color;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }

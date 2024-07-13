@@ -1,0 +1,247 @@
+@import "../common";
+
+header {
+    background-color: white;
+    font-family: medium-font;
+  }
+  // ! HEADER DESKTOP-MOBILE
+  .wrapperHeader {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  
+    @media (max-width: $lg) {
+      width: 95%;
+    }
+  
+    .contact-overlay {
+      padding: 15px 1px;
+      border-bottom: 1px solid #1515151f;
+  
+      @media (max-width: $sm) {
+        font-size: 15px;
+      }
+  
+      .greenText {
+        color: $green-low;
+        font-weight: 500;
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  
+    .header-part {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      .logo_part {
+        padding: 33px 0;
+  
+        @media (max-width: $md) {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          padding: 20px 0;
+          justify-content: space-between;
+        }
+  
+        .mobile-hamburger {
+          display: none;
+          cursor: pointer;
+  
+          @media (max-width: $md) {
+            display: block;
+          }
+        }
+      }
+  
+      .nav_desktop {
+        display: flex;
+        align-items: center;
+  
+        @media (max-width: $md) {
+          display: none;
+        }
+  
+        .static_part {
+          display: flex;
+          gap: 30px;
+          margin-right: 35px;
+  
+          @media (max-width: $lg) {
+            gap: 25px;
+            margin-right: 30px;
+          }
+  
+          a {
+            text-decoration: none;
+            color: $green-low;
+            padding: 3px;
+            font-weight: 500;
+            transition: 0.4s color ease;
+  
+            &:hover {
+              color: $green-high;
+              text-decoration: underline;
+            }
+          }
+        }
+  
+        .dinamic_part {
+          .profile-part {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+  
+            @media (max-width: $lg) {
+              gap: 7px;
+            }
+  
+            .avatar {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              cursor: pointer;
+              background-color: #ccc;
+  
+              @media (max-width: $lg) {
+                width: 35px;
+                height: 35px;
+              }
+            }
+  
+            .username {
+              font-weight: 500;
+              letter-spacing: 0.5px;
+            }
+          }
+  
+          .button-groups {
+            display: flex;
+  
+            a {
+              padding: 7px 13px;
+              font-family: semibold-font;
+              text-decoration: none;
+              border-radius: 12px;
+  
+              &:hover {
+                transition: 0.3s all;
+                transform: translateY(-2px);
+              }
+
+              &:first-child {
+                margin-right: 10px;
+              }
+            }
+  
+            .register_btn {
+              background-color: $green-low;
+              border: 2px solid $green-high;
+              color: #fff;
+            }
+  
+            .login_btn {
+              border: 2px solid $green-low;
+              background-color: transparent;
+              color: #000;
+            }
+          }
+        }
+      }
+  
+      .nav_mobile {
+        display: none;
+  
+        @media (max-width: $md) {
+          display: block;
+          position: fixed;
+          background-color: #35374b;
+          border-radius: 0px 0px 0px 55px;
+          top: 0;
+          right: -80%;
+          transition: 0.3s right ease;
+          display: flex;
+          flex-direction: column;
+          padding: 30px 15px 30px 90px;
+  
+          &.active {
+            right: 0;
+          }
+  
+          .close_menu_icon {
+            margin-top: 10px;
+            align-self: flex-end;
+            cursor: pointer;
+            margin-bottom: 40px;
+          }
+  
+          .menu_items {
+            display: flex;
+            margin-bottom: 20px;
+            flex-direction: column;
+            gap: 15px;
+  
+            a {
+              text-decoration: none;
+              text-align: right;
+              color: $green-low;
+              font-family: medium-font;
+            }
+          }
+  
+          .button-groups {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+  
+            a {
+              padding: 7px 13px;
+              font-family: semibold-font;
+              text-decoration: none;
+              text-align: center;
+              font-size: 12px;
+              border-radius: 12px;
+  
+              &:hover {
+                transition: 0.3s all;
+                transform: translateY(-2px);
+              }
+            }
+  
+            .register_btn {
+              background-color: $green-low;
+              border: 2px solid $green-high;
+              color: #fff;
+            }
+  
+            .login_btn {
+              background-color: transparent;
+              color: #000;
+              background-color: #f5f5f5;
+            }
+          }
+  
+          .profile-part {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+  
+            .avatar {
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              background-color: #ccc;
+            }
+            .username {
+              font-weight: 500;
+              color: #fff;
+              letter-spacing: 0.5px;
+            }
+          }
+        }
+      }
+    }
+  }
