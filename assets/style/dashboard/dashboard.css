@@ -355,6 +355,17 @@ header {
   padding: 30px 50px;
   font-family: medium-font;
 }
+@media (max-width: 769px) {
+  .container {
+    width: 90%;
+    padding: 20px 40px;
+  }
+}
+@media (max-width: 426px) {
+  .container {
+    padding: 15px 20px;
+  }
+}
 .container .wrapper {
   display: flex;
   flex-direction: column;
@@ -366,12 +377,22 @@ header {
   font-size: 1.6rem;
   letter-spacing: 0.4px;
 }
+@media (max-width: 520px) {
+  .container .wrapper .content-title h1 {
+    text-align: center;
+  }
+}
 .container .wrapper .dashboard-link {
   margin-bottom: 35px;
 }
 .container .wrapper .dashboard-link .component_title {
   font-size: 1.3rem;
   margin-bottom: 5px;
+}
+@media (max-width: 769px) {
+  .container .wrapper .dashboard-link .component_title {
+    font-size: 1.2rem;
+  }
 }
 .container .wrapper .dashboard-link .progress_bar {
   margin-bottom: 12px;
@@ -389,6 +410,20 @@ header {
 .container .wrapper .dashboard-link .progress_bar input:focus {
   border-color: #387ADF;
 }
+@media (max-width: 426px) {
+  .container .wrapper .dashboard-link .progress_bar input {
+    width: 100%;
+    padding: 7px 14px;
+  }
+}
+@media (max-width: 426px) {
+  .container .wrapper .dashboard-link .button-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
+}
 .container .wrapper .dashboard-link .button-groups button {
   padding: 10px 16px;
   background-color: #6A983C;
@@ -404,6 +439,16 @@ header {
 .container .wrapper .dashboard-link .button-groups button:hover {
   background-color: #46760A;
 }
+@media (max-width: 1024px) {
+  .container .wrapper .dashboard-link .button-groups button {
+    padding: 7px 14px;
+  }
+}
+@media (max-width: 520px) {
+  .container .wrapper .dashboard-link .button-groups button {
+    padding: 6px 12px;
+  }
+}
 .container .wrapper .dashboard-link .button-groups a {
   padding: 10px 16px;
   background-color: #6A983C;
@@ -418,6 +463,16 @@ header {
 .container .wrapper .dashboard-link .button-groups a:hover {
   background-color: #46760A;
 }
+@media (max-width: 1024px) {
+  .container .wrapper .dashboard-link .button-groups a {
+    padding: 7px 14px;
+  }
+}
+@media (max-width: 520px) {
+  .container .wrapper .dashboard-link .button-groups a {
+    padding: 6px 12px;
+  }
+}
 .container .wrapper .dashboard-statistics {
   margin-bottom: 30px;
 }
@@ -425,12 +480,22 @@ header {
   font-size: 1.3rem;
   margin-bottom: 5px;
 }
+@media (max-width: 769px) {
+  .container .wrapper .dashboard-statistics .component_title {
+    font-size: 1.2rem;
+  }
+}
 .container .wrapper .dashboard-statistics .box-groups {
   display: flex;
   gap: 31px;
+  flex-wrap: wrap;
+}
+@media (max-width: 520px) {
+  .container .wrapper .dashboard-statistics .box-groups {
+    justify-content: center;
+  }
 }
 .container .wrapper .dashboard-statistics .box-groups .box {
-  flex-grow: 3;
   border: 3px solid #D8D8D8;
   border-radius: 12px;
   display: flex;
@@ -439,9 +504,19 @@ header {
   padding-bottom: 10px;
   color: #5e5e5e;
 }
+@media (max-width: 520px) {
+  .container .wrapper .dashboard-statistics .box-groups .box {
+    width: 100%;
+  }
+}
 .container .wrapper .dashboard-statistics .box-groups .box .benefit b {
   font-size: 24px;
   color: #000;
+}
+@media (max-width: 769px) {
+  .container .wrapper .dashboard-statistics .box-groups .box .benefit b {
+    font-size: 22px;
+  }
 }
 .container .wrapper .dashboard-diagram {
   padding: 25px 35px;
@@ -454,6 +529,11 @@ header {
   margin-bottom: 5px;
   color: #393650;
 }
+@media (max-width: 769px) {
+  .container .wrapper .dashboard-diagram .component_title {
+    font-size: 1.2rem;
+  }
+}
 .container .wrapper .dashboard-diagram .diagram_container {
   text-align: center;
   padding: 50px 0;
@@ -465,18 +545,90 @@ header {
   font-size: 1.3rem;
   margin-bottom: 5px;
 }
+@media (max-width: 769px) {
+  .container .wrapper .dashboard-orders .component_title {
+    font-size: 1.2rem;
+  }
+}
 .container .wrapper .dashboard-orders .box-groups {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
+  /*
+    1. Use a more-intuitive box-sizing model.
+  */
+  /*
+    2. Remove default margin
+  */
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  /*
+    5. Improve media defaults
+  */
+  /*
+    6. Remove built-in form typography styles
+  */
+  /*
+    7. Avoid text overflows
+  */
+  /*
+    8. Create a root stacking context
+  */
+}
+@media (max-width: 1024px) {
+  .container .wrapper .dashboard-orders .box-groups {
+    flex-wrap: wrap;
+  }
+}
+.container .wrapper .dashboard-orders .box-groups *, .container .wrapper .dashboard-orders .box-groups *::before, .container .wrapper .dashboard-orders .box-groups *::after {
+  box-sizing: border-box;
+}
+.container .wrapper .dashboard-orders .box-groups * {
+  margin: 0;
+  padding: 0;
+}
+.container .wrapper .dashboard-orders .box-groups body {
+  line-height: 1.5;
+  background-color: #F5F5F5;
+  -webkit-font-smoothing: antialiased;
+}
+.container .wrapper .dashboard-orders .box-groups img, .container .wrapper .dashboard-orders .box-groups picture, .container .wrapper .dashboard-orders .box-groups video, .container .wrapper .dashboard-orders .box-groups canvas, .container .wrapper .dashboard-orders .box-groups svg {
+  display: block;
+  max-width: 100%;
+}
+.container .wrapper .dashboard-orders .box-groups input, .container .wrapper .dashboard-orders .box-groups button, .container .wrapper .dashboard-orders .box-groups textarea, .container .wrapper .dashboard-orders .box-groups select {
+  font: inherit;
+}
+.container .wrapper .dashboard-orders .box-groups p, .container .wrapper .dashboard-orders .box-groups h1, .container .wrapper .dashboard-orders .box-groups h2, .container .wrapper .dashboard-orders .box-groups h3, .container .wrapper .dashboard-orders .box-groups h4, .container .wrapper .dashboard-orders .box-groups h5, .container .wrapper .dashboard-orders .box-groups h6 {
+  overflow-wrap: break-word;
+}
+.container .wrapper .dashboard-orders .box-groups #root, .container .wrapper .dashboard-orders .box-groups #__next {
+  isolation: isolate;
 }
 .container .wrapper .dashboard-orders .box-groups .box {
-  width: 25%;
+  width: 33%;
   border: 3px solid #D8D8D8;
   border-radius: 12px;
   padding: 15px;
-  flex-wrap: wrap;
   padding-bottom: 15px;
+}
+@media (max-width: 1024px) {
+  .container .wrapper .dashboard-orders .box-groups .box {
+    flex-grow: 3;
+  }
+}
+@media (max-width: 769px) {
+  .container .wrapper .dashboard-orders .box-groups .box {
+    width: 40%;
+    flex-grow: inherit;
+  }
+}
+@media (max-width: 520px) {
+  .container .wrapper .dashboard-orders .box-groups .box {
+    width: 100%;
+  }
 }
 .container .wrapper .dashboard-orders .box-groups .box .date {
   font-size: 14px;
@@ -532,16 +684,36 @@ header {
 .container .wrapper .dashboard-orders .btn_watch_all:hover {
   background-color: #46760A;
 }
+@media (max-width: 1024px) {
+  .container .wrapper .dashboard-orders .btn_watch_all {
+    padding: 7px 14px;
+  }
+}
+@media (max-width: 520px) {
+  .container .wrapper .dashboard-orders .btn_watch_all {
+    padding: 6px 12px;
+  }
+}
 .container .wrapper .dashboard-feedbacks .component_title {
   font-size: 1.3rem;
   margin-bottom: 5px;
   margin-bottom: 20px;
+}
+@media (max-width: 769px) {
+  .container .wrapper .dashboard-feedbacks .component_title {
+    font-size: 1.2rem;
+  }
 }
 .container .wrapper .dashboard-feedbacks .feedback-box-groups {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
   margin-bottom: 30px;
+}
+@media (max-width: 992px) {
+  .container .wrapper .dashboard-feedbacks .feedback-box-groups {
+    justify-content: center;
+  }
 }
 .container .wrapper .dashboard-feedbacks .feedback-box-groups .feedback_box {
   display: flex;
@@ -554,10 +726,26 @@ header {
   border: 3px solid #D8D8D8;
   border-radius: 8px;
 }
+@media (max-width: 992px) {
+  .container .wrapper .dashboard-feedbacks .feedback-box-groups .feedback_box {
+    flex-grow: 2;
+  }
+}
+@media (max-width: 520px) {
+  .container .wrapper .dashboard-feedbacks .feedback-box-groups .feedback_box {
+    width: 100%;
+  }
+}
 .container .wrapper .dashboard-feedbacks .feedback-box-groups .feedback_box .user_feedback .stars {
   display: flex;
   margin-bottom: 5px;
   gap: 5px;
+}
+@media (max-width: 769px) {
+  .container .wrapper .dashboard-feedbacks .feedback-box-groups .feedback_box .user_feedback .stars svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 .container .wrapper .dashboard-feedbacks .btn_watch_all {
   padding: 10px 16px;
@@ -574,4 +762,14 @@ header {
 }
 .container .wrapper .dashboard-feedbacks .btn_watch_all:hover {
   background-color: #46760A;
+}
+@media (max-width: 1024px) {
+  .container .wrapper .dashboard-feedbacks .btn_watch_all {
+    padding: 7px 14px;
+  }
+}
+@media (max-width: 520px) {
+  .container .wrapper .dashboard-feedbacks .btn_watch_all {
+    padding: 6px 12px;
+  }
 }/*# sourceMappingURL=dashboard.css.map */

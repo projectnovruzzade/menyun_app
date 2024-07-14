@@ -9,7 +9,7 @@ $color-gray-low: #5e5e5e;
 // ! Breakpoints
 $sm-ext: 376px;
 $sm: 426px;
-$md-ext: 500px;
+$md-ext: 520px;
 $md: 769px;
 $lg-ext: 992px;
 $lg: 1024px;
@@ -42,12 +42,24 @@ $desktop: 1366px;
   &:hover {
     background-color: $green-high-hover;
   }
+
+  @media (max-width: $lg) {
+    padding: 7px 14px;
+  }
+
+  @media (max-width: $md-ext) {
+    padding: 6px 12px;
+  }
 }
 
 
 @mixin componentTitle {
   font-size: 1.3rem; 
   margin-bottom: 5px; 
+
+  @media (max-width: $md) {
+    font-size: 1.2rem;
+  }
 }
 
 /*

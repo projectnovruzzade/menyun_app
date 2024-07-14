@@ -363,7 +363,7 @@ header {
   padding-bottom: 40px;
   padding: 50px;
 }
-@media (max-width: 500px) {
+@media (max-width: 520px) {
   .login-content {
     width: 100%;
   }
@@ -374,7 +374,7 @@ header {
   text-align: center;
   font-size: 32px;
 }
-@media (max-width: 500px) {
+@media (max-width: 520px) {
   .login-content .title {
     font-size: 26px;
     padding: 30px 0;
@@ -404,7 +404,7 @@ header {
 .login-content .form-content form div {
   margin-bottom: 18px;
 }
-@media (max-width: 500px) {
+@media (max-width: 520px) {
   .login-content .form-content form div {
     margin-bottom: 24px;
   }

@@ -26,6 +26,15 @@
   padding: 30px 50px;
   font-family: medium-font;
 
+  @media (max-width: $md) {
+    width: 90%;
+    padding: 20px 40px;
+  }
+
+  @media (max-width: $sm) {
+    padding: 15px 20px;
+  }
+
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -35,7 +44,12 @@
       h1 {
         font-size: 1.6rem;
         letter-spacing: 0.4px;
+
+        @media (max-width: $md-ext) {
+          text-align: center;
+        }
       }
+    
     }
 
     .dashboard-link {
@@ -51,9 +65,20 @@
           box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.75);
           padding: 8px 20px;
           width: 270px;
+
+          @media (max-width: $sm) {
+            width: 100%;
+            padding: 7px 14px;
+          }
         }
       }
       .button-groups {
+        @media (max-width: $sm) {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          text-align: center;
+        }
         button {
           @include buttonStyle;
           margin-right: 5px;
@@ -75,9 +100,14 @@
       .box-groups {
         display: flex;
         gap: 31px;
+        flex-wrap: wrap;
+
+        
+        @media (max-width: $md-ext) {
+          justify-content: center;
+        }
 
         .box {
-          flex-grow: 3;
           border: 3px solid $border-color;
           border-radius: 12px;
           display: flex;
@@ -86,10 +116,19 @@
           padding-bottom: 10px;
           color: $color-gray-low;
 
+          @media (max-width: $md-ext) {
+            width: 100%;
+          }
+
+
           .benefit {
             b {
               font-size: 24px;
               color: #000;
+
+              @media (max-width: $md) {
+                font-size: 22px;
+              }
             }
           }
         }
@@ -122,62 +161,13 @@
 
       .box-groups {
         display: flex;
-        flex-wrap: wrap;
         gap: 20px;
-
-        .box {
-          width: 25%;
-          border: 3px solid $border-color;
-          border-radius: 12px;
-          padding: 15px;
+        
+        @media (max-width: $lg) {
           flex-wrap: wrap;
-          padding-bottom: 15px;
-
-          .date {
-            font-size: 14px;
-            font-family: regular-font;
-            color: #000;
-            margin-bottom: 10px;
-          }
-
-          .content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            .price {
-              font-weight: 400;
-              font-family: regular-font;
-
-              .edit {
-                font-size: 25px;
-                letter-spacing: 0.4px;
-              }
-            }
-
-            .btn_solid_gray {
-              padding: 12px 15px;
-              text-align: center;
-              text-decoration: none;
-              color: #151515;
-              font-family: semibold-font;
-              font-weight: bold;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              border-radius: 12px;
-              background-color: $bg-color;
-
-              svg {
-                transition: 0.4s all;
-              }
-
-              &:hover svg {
-                transform: translateX(2px);
-              }
-            }
-          }
         }
+
+       @import "../box-order";
       }
 
       .btn_watch_all {
@@ -200,6 +190,10 @@
           flex-wrap: wrap;
           margin-bottom: 30px;
 
+          @media (max-width: $lg-ext) {
+            justify-content: center;
+          }
+
           .feedback_box {
             display: flex;
             width: 30%;
@@ -211,6 +205,13 @@
             border: 3px solid $border-color;
             border-radius: 8px;
 
+            @media (max-width: $lg-ext) {
+              flex-grow: 2;
+            }
+
+            @media (max-width: $md-ext) {
+              width: 100%;
+            }
 
             .user_feedback {
 
@@ -218,6 +219,16 @@
                 display: flex;
                 margin-bottom: 5px;
                 gap: 5px;
+
+
+                @media (max-width: $md) {
+
+                  svg {
+
+                    width: 20px;
+                    height: 20px;
+                  }
+                }
               }
             }
 

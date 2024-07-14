@@ -1,0 +1,68 @@
+@import "../common";
+
+.box {
+    width: 33%;
+    border: 3px solid $border-color;
+    border-radius: 12px;
+    padding: 15px;
+    padding-bottom: 15px;
+
+    @media (max-width: $lg) {
+      flex-grow: 3;
+    }
+
+    @media (max-width: $md) {
+      width: 40%;
+      flex-grow: inherit;
+    }
+
+    @media (max-width: $md-ext) {
+      width: 100%;
+    }
+
+
+    .date {
+      font-size: 14px;
+      font-family: regular-font;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .price {
+        font-weight: 400;
+        font-family: regular-font;
+
+        .edit {
+          font-size: 25px;
+          letter-spacing: 0.4px;
+        }
+      }
+
+      .btn_solid_gray {
+        padding: 12px 15px;
+        text-align: center;
+        text-decoration: none;
+        color: #151515;
+        font-family: semibold-font;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 12px;
+        background-color: $bg-color;
+
+        svg {
+          transition: 0.4s all;
+        }
+
+        &:hover svg {
+          transform: translateX(2px);
+        }
+      }
+    }
+  }

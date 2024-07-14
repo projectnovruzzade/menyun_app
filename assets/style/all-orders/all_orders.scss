@@ -1,0 +1,113 @@
+@import "../../common";
+
+@font-face {
+  font-family: regular-font;
+  src: url("../../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: medium-font;
+  src: url("../../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: semibold-font;
+  src: url("../../fonts/Poppins-SemiBold.ttf");
+}
+
+
+
+#all_orders {
+    height: 100vh;
+    font-family: medium-font;
+
+    @media (max-width: $lg-ext) {
+        height: auto;
+    }
+}
+
+@import "../header";
+
+.container {
+    padding: 29px 50px;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 12px;
+    margin: 56px auto;
+
+    @media (max-width: $md) {
+        width: 90%;
+        padding: 20px 35px;
+    }
+
+    @media (max-width: $sm-ext) {
+        width: 99%;
+        padding: 20px 15px;
+    }
+
+    .content-title {
+        margin-bottom: 37px;
+        font-size: 26px;
+
+        @media (max-width: $md) {
+            font-size: 24px;
+        }
+        @media (max-width: $sm) {
+            font-size: 22px;
+        }
+    }
+
+    .back_menyu {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 25px;
+
+
+        &:hover svg {
+            transform: translateY(-3px) translateX(-3px);
+        }
+
+        .component_title {
+            @include componentTitle;
+            font-family: semibold-font;
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+
+        svg {
+            width: 30px;
+            transition: .3s all ease;
+            height: 30px;
+            transform: translateY(-3px);
+        }
+    }
+
+    .content_wrapper {
+        display: grid;
+        row-gap: 30px;
+        column-gap: 25px;
+        justify-content: center;
+        grid-template-columns: repeat(4,24%);
+
+
+        @media (max-width: 1190px) {
+            grid-template-columns: repeat(3,33%);
+        }
+        @media (max-width: $lg-ext) {
+            grid-template-columns: repeat(2,49%);
+        }
+
+        @media (max-width: $md-ext) {
+            grid-template-columns: repeat(1,1fr);
+        }
+
+        // ! BOX
+        @import "../box-order";
+        .box {
+            width: auto;
+        }
+    }
+}
+
