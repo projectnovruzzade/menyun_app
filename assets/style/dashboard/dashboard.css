@@ -616,7 +616,7 @@ header {
 }
 @media (max-width: 1024px) {
   .container .wrapper .dashboard-orders .box-groups .box {
-    flex-grow: 3;
+    width: 45%;
   }
 }
 @media (max-width: 769px) {
@@ -709,11 +709,59 @@ header {
   gap: 30px;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  /*
+    1. Use a more-intuitive box-sizing model.
+  */
+  /*
+    2. Remove default margin
+  */
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  /*
+    5. Improve media defaults
+  */
+  /*
+    6. Remove built-in form typography styles
+  */
+  /*
+    7. Avoid text overflows
+  */
+  /*
+    8. Create a root stacking context
+  */
 }
 @media (max-width: 992px) {
   .container .wrapper .dashboard-feedbacks .feedback-box-groups {
     justify-content: center;
   }
+}
+.container .wrapper .dashboard-feedbacks .feedback-box-groups *, .container .wrapper .dashboard-feedbacks .feedback-box-groups *::before, .container .wrapper .dashboard-feedbacks .feedback-box-groups *::after {
+  box-sizing: border-box;
+}
+.container .wrapper .dashboard-feedbacks .feedback-box-groups * {
+  margin: 0;
+  padding: 0;
+}
+.container .wrapper .dashboard-feedbacks .feedback-box-groups body {
+  line-height: 1.5;
+  background-color: #F5F5F5;
+  -webkit-font-smoothing: antialiased;
+}
+.container .wrapper .dashboard-feedbacks .feedback-box-groups img, .container .wrapper .dashboard-feedbacks .feedback-box-groups picture, .container .wrapper .dashboard-feedbacks .feedback-box-groups video, .container .wrapper .dashboard-feedbacks .feedback-box-groups canvas, .container .wrapper .dashboard-feedbacks .feedback-box-groups svg {
+  display: block;
+  max-width: 100%;
+}
+.container .wrapper .dashboard-feedbacks .feedback-box-groups input, .container .wrapper .dashboard-feedbacks .feedback-box-groups button, .container .wrapper .dashboard-feedbacks .feedback-box-groups textarea, .container .wrapper .dashboard-feedbacks .feedback-box-groups select {
+  font: inherit;
+}
+.container .wrapper .dashboard-feedbacks .feedback-box-groups p, .container .wrapper .dashboard-feedbacks .feedback-box-groups h1, .container .wrapper .dashboard-feedbacks .feedback-box-groups h2, .container .wrapper .dashboard-feedbacks .feedback-box-groups h3, .container .wrapper .dashboard-feedbacks .feedback-box-groups h4, .container .wrapper .dashboard-feedbacks .feedback-box-groups h5, .container .wrapper .dashboard-feedbacks .feedback-box-groups h6 {
+  overflow-wrap: break-word;
+}
+.container .wrapper .dashboard-feedbacks .feedback-box-groups #root, .container .wrapper .dashboard-feedbacks .feedback-box-groups #__next {
+  isolation: isolate;
 }
 .container .wrapper .dashboard-feedbacks .feedback-box-groups .feedback_box {
   display: flex;
@@ -740,6 +788,10 @@ header {
   display: flex;
   margin-bottom: 5px;
   gap: 5px;
+}
+.container .wrapper .dashboard-feedbacks .feedback-box-groups .feedback_box .user_feedback .stars svg {
+  width: 20px;
+  height: 20px;
 }
 @media (max-width: 769px) {
   .container .wrapper .dashboard-feedbacks .feedback-box-groups .feedback_box .user_feedback .stars svg {

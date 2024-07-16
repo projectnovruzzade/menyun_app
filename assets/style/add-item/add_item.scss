@@ -1,0 +1,21 @@
+@import "../../common";
+
+@font-face {
+    font-family: regular-font;
+    src: url("../../fonts/Poppins-Regular.ttf");
+  }
+  @font-face {
+    font-family: medium-font;
+    src: url("../../fonts/Poppins-Medium.ttf");
+  }
+  @font-face {
+    font-family: semibold-font;
+    src: url("../../fonts/Poppins-SemiBold.ttf");
+  }
+
+
+#adding_item {
+    height: 100vh;
+}
+
+@import "../header";

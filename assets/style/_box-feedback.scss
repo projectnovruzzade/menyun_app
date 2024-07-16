@@ -1,0 +1,42 @@
+@import "../common";
+
+.feedback_box {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    gap: 14px;
+    font-size: 15px;
+    color: #6E7072;
+    padding: 20px;
+    border: 3px solid $border-color;
+    border-radius: 8px;
+
+    @media (max-width: $lg-ext) {
+      flex-grow: 2;
+    }
+
+    @media (max-width: $md-ext) {
+      width: 100%;
+    }
+
+    .user_feedback {
+
+      .stars {
+        display: flex;
+        margin-bottom: 5px;
+        gap: 5px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+
+            @media (max-width: $md) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+      }
+    }
+
+  }
