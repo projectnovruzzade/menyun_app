@@ -98,13 +98,28 @@ header .restoran_name {
   position: relative;
   font-size: 30px;
   z-index: 5;
+  text-align: center;
   font-family: semibold-font;
 }
 header .restoran_desc {
   font-size: 14px;
   position: relative;
   color: #fff;
+  text-align: center;
   z-index: 5;
+}
+@media (max-width: 769px) {
+  header .restoran_name {
+    font-size: 26px;
+  }
+}
+@media (max-width: 426px) {
+  header .restoran_name {
+    font-size: 24px;
+  }
+  header .restoran_desc {
+    font-size: 13px;
+  }
 }
 
 .category-box-group {
