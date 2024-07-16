@@ -106,6 +106,12 @@
         align-items: center;
         margin-bottom: 40px;
 
+        @media (max-width: $sm) {
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
         .text {
             display: flex;
             align-items: center;

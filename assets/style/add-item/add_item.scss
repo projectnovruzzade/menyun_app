@@ -1,21 +1,112 @@
 @import "../../common";
 
 @font-face {
-    font-family: regular-font;
-    src: url("../../fonts/Poppins-Regular.ttf");
-  }
-  @font-face {
-    font-family: medium-font;
-    src: url("../../fonts/Poppins-Medium.ttf");
-  }
-  @font-face {
-    font-family: semibold-font;
-    src: url("../../fonts/Poppins-SemiBold.ttf");
-  }
-
+  font-family: regular-font;
+  src: url("../../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: medium-font;
+  src: url("../../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: semibold-font;
+  src: url("../../fonts/Poppins-SemiBold.ttf");
+}
 
 #adding_item {
-    height: 100vh;
+  height: 100vh;
 }
 
 @import "../header";
+
+.main-container {
+  margin-top: 13px;
+  background: #fff;
+  padding: 35px 60px;
+  font-family: medium-font;
+
+  @media (max-width: $sm) {
+    padding: 15px 10px;
+  }
+
+  .content-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .text {
+      display: flex;
+      align-items: center;
+      margin-right: 25px;
+      font-size: 26px;
+      font-family: semibold-font;
+
+      @media (max-width: $md) {
+        font-size: 23px;
+      }
+
+      @media (max-width: $sm) {
+        font-size: 20px;
+      }
+
+      svg {
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+
+    .btn_watch_menu {
+      @include buttonStyle;
+    }
+  }
+
+  .form-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    padding-bottom: 60px;
+
+    form {
+      .input_content {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        label {
+          margin-bottom: 2px;
+          font-size: 14px;
+          font-family: semibold-font;
+        }
+
+        input {
+          @include inputStyle;
+        }
+
+        select {
+          @include inputStyle;
+          padding-right: 0;
+          padding-left: 5px;
+          color: $color-gray-low;
+        }
+
+        .item-price input {
+          appearance: none;
+        }
+      }
+
+      .btn_add {
+        @include buttonStyle;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        padding: 9px 0;
+      }
+    }
+  }
+}

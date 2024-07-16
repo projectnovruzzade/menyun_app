@@ -1,0 +1,115 @@
+@import "../../common";
+
+@font-face {
+  font-family: regular-font;
+  src: url("../../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: medium-font;
+  src: url("../../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: semibold-font;
+  src: url("../../fonts/Poppins-SemiBold.ttf");
+}
+
+#menu {
+  height: auto;
+  font-family: medium-font;
+}
+
+header {
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 43;
+  background-image: url("../../../img/example-image-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 37px;
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background: #00000077;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .restoran_name {
+    color: #fff;
+    position: relative;
+    font-size: 30px;
+    z-index: 5;
+    font-family: semibold-font;
+  }
+
+  .restoran_desc {
+    font-size: 14px;
+    position: relative;
+    color: #fff;
+    z-index: 5;
+  }
+}
+
+
+
+.category-box-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 37px;
+
+
+    // ! EXTRA MEDIA QUARIES
+    @media (max-width: $lg) {
+        overflow-x: scroll;
+        padding-bottom: 17px;
+    }
+
+    .category-box {
+        padding: 7px 14px;
+        color: #000;
+        background-color: #d0d0d0;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+}
+
+.item-content {
+
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 70px;
+
+    .component_title {
+        @include componentTitle;
+        font-family: medium-font;
+    }
+
+    .box-groups {
+        display: flex;
+        padding-left: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 15px;
+
+        @import "../box-item";
+
+    }
+
+}
+
+
+

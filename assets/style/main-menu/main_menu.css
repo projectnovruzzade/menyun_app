@@ -453,6 +453,13 @@ header {
   align-items: center;
   margin-bottom: 40px;
 }
+@media (max-width: 426px) {
+  .main-container .content-title {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
 .main-container .content-title .text {
   display: flex;
   align-items: center;
@@ -601,7 +608,7 @@ header {
   width: 230px;
   height: 300px;
   border-radius: 8px;
-  border: 2px solid #d9d9d9;
+  border: 1px solid #d9d9d9;
 }
 .main-container .menu-content .menu-box-group .box .image_content {
   height: 78%;

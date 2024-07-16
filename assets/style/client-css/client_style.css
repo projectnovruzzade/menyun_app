@@ -1,0 +1,282 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  background-color: #F5F5F5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: regular-font;
+  src: url("../../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: medium-font;
+  src: url("../../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: semibold-font;
+  src: url("../../fonts/Poppins-SemiBold.ttf");
+}
+#menu {
+  height: auto;
+  font-family: medium-font;
+}
+
+header {
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 43;
+  background-image: url("../../../img/example-image-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 37px;
+}
+header .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4666666667);
+  top: 0;
+  left: 0;
+  right: 0;
+}
+header .restoran_name {
+  color: #fff;
+  position: relative;
+  font-size: 30px;
+  z-index: 5;
+  font-family: semibold-font;
+}
+header .restoran_desc {
+  font-size: 14px;
+  position: relative;
+  color: #fff;
+  z-index: 5;
+}
+
+.category-box-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 37px;
+}
+@media (max-width: 1024px) {
+  .category-box-group {
+    overflow-x: scroll;
+    padding-bottom: 17px;
+  }
+}
+.category-box-group .category-box {
+  padding: 7px 14px;
+  color: #000;
+  background-color: #d0d0d0;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.item-content {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+.item-content .component_title {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  font-family: medium-font;
+}
+@media (max-width: 769px) {
+  .item-content .component_title {
+    font-size: 1.2rem;
+  }
+}
+.item-content .box-groups {
+  display: flex;
+  padding-left: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 15px;
+  /*
+    1. Use a more-intuitive box-sizing model.
+  */
+  /*
+    2. Remove default margin
+  */
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  /*
+    5. Improve media defaults
+  */
+  /*
+    6. Remove built-in form typography styles
+  */
+  /*
+    7. Avoid text overflows
+  */
+  /*
+    8. Create a root stacking context
+  */
+}
+.item-content .box-groups *, .item-content .box-groups *::before, .item-content .box-groups *::after {
+  box-sizing: border-box;
+}
+.item-content .box-groups * {
+  margin: 0;
+  padding: 0;
+}
+.item-content .box-groups body {
+  line-height: 1.5;
+  background-color: #F5F5F5;
+  -webkit-font-smoothing: antialiased;
+}
+.item-content .box-groups img, .item-content .box-groups picture, .item-content .box-groups video, .item-content .box-groups canvas, .item-content .box-groups svg {
+  display: block;
+  max-width: 100%;
+}
+.item-content .box-groups input, .item-content .box-groups button, .item-content .box-groups textarea, .item-content .box-groups select {
+  font: inherit;
+}
+.item-content .box-groups p, .item-content .box-groups h1, .item-content .box-groups h2, .item-content .box-groups h3, .item-content .box-groups h4, .item-content .box-groups h5, .item-content .box-groups h6 {
+  overflow-wrap: break-word;
+}
+.item-content .box-groups #root, .item-content .box-groups #__next {
+  isolation: isolate;
+}
+.item-content .box-groups .box {
+  width: 230px;
+  height: 300px;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+}
+.item-content .box-groups .box .image_content {
+  height: 78%;
+  padding: 3px;
+  position: relative;
+  z-index: 4;
+}
+.item-content .box-groups .box .image_content img {
+  width: 100%;
+  height: 99%;
+  z-index: -1;
+  top: 0;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  right: 0;
+  position: absolute;
+}
+.item-content .box-groups .box .image_content .heading_part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+.item-content .box-groups .box .image_content .heading_part .tag-id {
+  display: flex;
+  align-items: center;
+  padding: 2px 5px;
+  background-color: #fff;
+  border-radius: 8px;
+  font-size: 10px;
+}
+.item-content .box-groups .box .image_content .heading_part .tag-id svg {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+}
+.item-content .box-groups .box .image_content .heading_part .button-groups {
+  display: flex;
+  gap: 15px;
+}
+.item-content .box-groups .box .image_content .heading_part .button-groups .btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.item-content .box-groups .box .image_content .heading_part .button-groups .btn svg {
+  width: 24px;
+  height: 24px;
+}
+.item-content .box-groups .box .image_content .heading_part .button-groups .btn_edit {
+  background-color: #4EAEF3;
+}
+.item-content .box-groups .box .image_content .heading_part .button-groups .btn_remove {
+  background-color: #F34E4E;
+}
+.item-content .box-groups .box .data_content {
+  height: 22%;
+  padding: 0 10px;
+  padding-top: 7px;
+}
+.item-content .box-groups .box .data_content .item_name {
+  font-size: 17px;
+  margin-bottom: 2px;
+}
+.item-content .box-groups .box .data_content .item_price {
+  font-size: 14px;
+  letter-spacing: 1px;
+}/*# sourceMappingURL=client_style.css.map */
