@@ -1,3 +1,16 @@
+@keyframes animateBox {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  }
+  75% {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.75);
+  }
+}
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -69,6 +82,19 @@ p, h1, h2, h3, h4, h5, h6 {
   height: auto;
 }
 
+@keyframes animateBox {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  }
+  75% {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.75);
+  }
+}
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -582,6 +608,19 @@ header {
     flex-wrap: wrap;
   }
 }
+@keyframes animateBox {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  }
+  75% {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.75);
+  }
+}
 .container .wrapper .dashboard-orders .box-groups *, .container .wrapper .dashboard-orders .box-groups *::before, .container .wrapper .dashboard-orders .box-groups *::after {
   box-sizing: border-box;
 }
@@ -736,6 +775,19 @@ header {
 @media (max-width: 992px) {
   .container .wrapper .dashboard-feedbacks .feedback-box-groups {
     justify-content: center;
+  }
+}
+@keyframes animateBox {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  }
+  75% {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.75);
   }
 }
 .container .wrapper .dashboard-feedbacks .feedback-box-groups *, .container .wrapper .dashboard-feedbacks .feedback-box-groups *::before, .container .wrapper .dashboard-feedbacks .feedback-box-groups *::after {

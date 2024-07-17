@@ -1,3 +1,16 @@
+@keyframes animateBox {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  }
+  75% {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.75);
+  }
+}
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -75,6 +88,19 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@keyframes animateBox {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  }
+  75% {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.75);
+  }
+}
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -459,6 +485,19 @@ header {
 @media (max-width: 520px) {
   .container .content_wrapper {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+@keyframes animateBox {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  }
+  75% {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.75);
   }
 }
 .container .content_wrapper *, .container .content_wrapper *::before, .container .content_wrapper *::after {

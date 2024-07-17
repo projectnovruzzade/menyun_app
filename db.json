@@ -1,0 +1,40 @@
+{
+  "orders": [
+    {
+      "id": 17,
+      "name": "Tuna qəlyanaltısı",
+      "price": 7.9,
+      "count": 1
+    },
+    {
+      "id": 5,
+      "name": "Pizza",
+      "price": 25.8,
+      "count": 2
+    },
+    {
+      "id": 5,
+      "name": "Pizza",
+      "price": 51.6,
+      "count": 4
+    },
+    {
+      "id": 5,
+      "name": "Pizza",
+      "price": 38.7,
+      "count": 3
+    },
+    {
+      "id": 5,
+      "name": "Pizza",
+      "price": 12.9,
+      "count": 1
+    },
+    {
+      "id": 5,
+      "name": "Pizza",
+      "price": 25.8,
+      "count": 2
+    }
+  ]
+}
