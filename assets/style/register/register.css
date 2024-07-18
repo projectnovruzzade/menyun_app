@@ -392,6 +392,7 @@ header {
 @media (max-width: 520px) {
   .login-content {
     width: 100%;
+    padding: 30px 25px;
   }
 }
 .login-content .title {
@@ -475,6 +476,7 @@ header {
   background-color: #6A983C;
   border: 2px solid #407500;
   color: #fff;
+  padding: 8px 13px;
 }
 .login-content .form-content form .button-groups .login:hover {
   background-color: #46760A;

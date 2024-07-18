@@ -17,6 +17,7 @@
 
     @media (max-width: $md-ext) {
         width: 100%;
+        padding: 30px 25px;
     }
 
     .title {
@@ -107,6 +108,7 @@
                     background-color: $green-low;
                     border: 2px solid $green-high;
                     color: #fff;   
+                    padding: 8px 13px;
 
 
                     &:hover {
