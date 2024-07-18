@@ -449,6 +449,8 @@ header {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  max-width: 330px;
+  width: 330px;
 }
 .main-container .form-content form .input_content label {
   margin-bottom: 2px;
@@ -456,6 +458,7 @@ header {
   font-family: semibold-font;
 }
 .main-container .form-content form .input_content input {
+  width: 100%;
   padding: 10px 23px;
   border: 2px solid #D8D8D8;
   border-radius: 12px;
@@ -466,6 +469,7 @@ header {
   border-color: #387ADF;
 }
 .main-container .form-content form .input_content select {
+  width: 100%;
   padding: 10px 23px;
   border: 2px solid #D8D8D8;
   border-radius: 12px;
