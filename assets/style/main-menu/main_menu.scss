@@ -102,12 +102,12 @@
     margin-top: 20px;
 
     @media (max-width: $md) {
-        width: 90%;
+        width: 95%;
+        border-radius: 8px;
         padding: 20px 35px;
     }
 
     @media (max-width: $sm) {
-        width: 95%;
         padding: 20px 25px;
     }
 
