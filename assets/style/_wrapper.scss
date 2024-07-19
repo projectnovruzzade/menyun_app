@@ -114,6 +114,12 @@
                     &:hover {
                         background-color: $green-high-hover;
                     }
+                
+                    &.disabled {
+                        opacity: .4;
+                        cursor: not-allowed;
+                    }
+                    
                   }
 
 
@@ -122,10 +128,9 @@
                     color: #000;
                     border: none;
 
-                    &:hover {
-                        background-color: #ccc;
-                    }
                   }
+
+               
 
 
             }

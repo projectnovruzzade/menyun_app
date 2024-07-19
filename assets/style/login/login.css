@@ -485,13 +485,14 @@ header {
 .login-content .form-content form .button-groups .login:hover {
   background-color: #46760A;
 }
+.login-content .form-content form .button-groups .login.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
 .login-content .form-content form .button-groups .register {
   background-color: #F5F5F5;
   color: #000;
   border: none;
-}
-.login-content .form-content form .button-groups .register:hover {
-  background-color: #ccc;
 }
 .login-content .form-content form .adds_text {
   color: #6A983C;

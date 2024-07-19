@@ -37,22 +37,31 @@ body {
   @media (max-width: 1175px) {
     margin-bottom: 50px;
   }
+  @media (max-width: $md) {
+    width: 90%;
+    padding: 20px 35px;
+  }
+
+  @media (max-width: $sm) {
+    width: 95%;
+    padding: 20px 25px;
+  }
 
   @media (max-width: $sm-ext) {
-    width: 95%;
+    width: 99%;
+    padding: 20px 15px;
   }
 
   .content-title {
     font-size: 20px;
 
-    @media (max-width: $sm) {
-        font-size: 18px;
+    @media (max-width: $md) {
+      font-size: 17px;
+      text-align: center;
+      h1 {
         text-align: center;
-        h1 {
-            text-align: center;
-        }
-
       }
+    }
   }
 
   // ! WRAPPER
@@ -68,23 +77,50 @@ body {
       align-items: center;
     }
 
-    .photo_bar {
-      width: 170px;
-      height: 170px;
-      display: flex;
-      align-items: center;
-      margin-right: 90px;
-      justify-content: center;
-      border-radius: 50%;
-      background-color: #ccc;
+    .form_bar {
+      overflow: hidden;
+    }
 
-      @media (max-width: 1175px) {
-          margin: 0;
-          margin-bottom: 30px;
+    .photo_bar {
+      margin-right: 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // background-color: red;
+
+      .this_is_image {
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.133);
+        width: 170px;
+        position: relative;
+        height: 170px;
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 5;
+        }
       }
 
-      
-    
+      form {
+        // background-color: rebeccapurple;
+        margin-top: 30px;
+        align-self: flex-end;
+        overflow: hidden;
+        width: 80%;
+
+        @media (max-width: $md) {
+          align-self: center;
+          width: 80%;
+        }
+      }
+
+      @media (max-width: 1175px) {
+        margin: 0;
+        margin-bottom: 30px;
+      }
 
       img {
         width: 110px;
@@ -111,8 +147,8 @@ body {
               margin-right: 40px;
             }
 
-            @media (max-width: $sm) {
-                margin: 0;
+            @media (max-width: $md) {
+              margin: 0;
             }
 
             .input-content {
@@ -123,6 +159,10 @@ body {
 
               @media (min-width: 1366px) {
                 width: 320px;
+              }
+
+              @media (max-width: $md) {
+                width: 100%;
               }
 
               @media (max-width: $sm) {
@@ -170,14 +210,39 @@ body {
           }
         }
 
+        .button-groups {
+          display: flex;
+          gap: 12px;
+          margin-top: 15px;
+          flex-wrap: wrap;
+          align-items: center;
+
+          @media (max-width: $md) {
+            justify-content: center;
+          }
+        }
+
+        // ! duzenlendi
+        .button-groups .btn_reset {
+          @include buttonStyle;
+          padding: 9px 13px;
+          font-size: 14px;
+          background-color: $color-red;
+          border: none;
+          
+
+          &:hover {
+            background: #f93939;
+          }
+
+          @media (max-width: $md) {
+            width: 70%;
+          }
+        }
+
         .btn_add {
+          @include buttonStyle;
           padding: 10px 43px;
-          color: #fff;
-          background-color: $green-low;
-          border: 2px solid $green-high;
-          margin-top: 20px;
-          border-radius: 12px;
-          transition: 0.2s all;
           width: fit-content;
           cursor: pointer;
 
@@ -186,7 +251,6 @@ body {
             width: 50%;
           }
 
-          
           @media (max-width: $md) {
             width: 90%;
           }
