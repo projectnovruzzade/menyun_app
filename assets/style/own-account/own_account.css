@@ -453,6 +453,7 @@ header {
   background-color: rgba(0, 0, 0, 0.133);
   width: 170px;
   position: relative;
+  padding: 3px;
   height: 170px;
 }
 .container .wrapperContainer .photo_bar .this_is_image img {
@@ -461,6 +462,9 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
 }
 .container .wrapperContainer .photo_bar form {
   margin-top: 30px;
@@ -472,6 +476,31 @@ header {
   .container .wrapperContainer .photo_bar form {
     align-self: center;
     width: 80%;
+  }
+}
+.container .wrapperContainer .photo_bar form .btn_refresh {
+  background-color: #6A983C;
+  border: 2px solid #407500;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: 0.3s all;
+  padding: 8px 13px;
+  margin-top: 10px;
+}
+.container .wrapperContainer .photo_bar form .btn_refresh:hover {
+  background-color: #46760A;
+}
+@media (max-width: 1024px) {
+  .container .wrapperContainer .photo_bar form .btn_refresh {
+    padding: 7px 14px;
+  }
+}
+@media (max-width: 520px) {
+  .container .wrapperContainer .photo_bar form .btn_refresh {
+    padding: 6px 12px;
   }
 }
 @media (max-width: 1175px) {

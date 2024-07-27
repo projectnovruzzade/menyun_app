@@ -4,7 +4,7 @@ const loginBtn = document.querySelector(".login");
 function checkInputs() {
     let allFilled = true;
     for(let btn of all_inputs) {
-        if(btn.value.trim() === "") {
+        if(btn?.value?.trim() === "") {
             allFilled = false;
             break;
         }

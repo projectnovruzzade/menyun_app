@@ -24,14 +24,14 @@ window.addEventListener("load", () => {
   } else {
     contentPart.innerHTML = `
     <div class="button-groups">
-      <a href="./register.html" class="register_btn">Qeydiyyat</a>
-      <a href="index.html" class="login_btn">Giriş</a>
+      <a href="./register.html" class="register_btn">Register</a>
+      <a href="index.html" class="login_btn">Login</a>
     </div>`;
 
     contentPartMobile.innerHTML = `
     <div class="button-groups">
-      <a href="./register.html" class="register_btn">Qeydiyyat</a>
-     <a href="index.html" class="login_btn">Giriş</a>
+      <a href="./register.html" class="register_btn">Register</a>
+     <a href="index.html" class="login_btn">Login</a>
     </div>`;
   }
 });
